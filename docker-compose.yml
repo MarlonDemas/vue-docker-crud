@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+        mysql-development:
+                restart: always
+                container_name: mysql-development
+                image: mysql:8.0.17
+                environment:
+                        MYSQL_ROOT_PASSWORD: helloworld
+                        MYSQL_DATABASE: testapp
+                ports:
+                        - "3308:3306"
+        
+        admin:
+                image: adminer
+                ports:
+                        - "8080:8080"
+        
+        myapp:
+                restart: on-failure
+                build: ./
+                expose:
+                        - "8115"
+                ports:
+                        - 8115:8115
+                environment:
+                        WAIT_HOSTS: mysql:3306
+                depends_on:
+                        - mysql-development
