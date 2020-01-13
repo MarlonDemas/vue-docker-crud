@@ -9,7 +9,7 @@
         "build": "nuxt build",
         "start": "nuxt start",
         "generate": "nuxt generate",
-        "docker": "npm run dev"
+        "docker": "npm run start"
     },
     "dependencies": {
         "bootstrap": "^4.1.3",
