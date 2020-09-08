@@ -26,6 +26,7 @@ services:
         frontend: 
                 build: ./frontend
                 command: npm run build
+                command: npm run generate
                 command: npm run docker
                 volumes: 
                         - ./frontend:/usr/src/app
