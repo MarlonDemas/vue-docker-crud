@@ -1,6 +1,8 @@
 FROM node:8
 
-COPY package*.json /usr/src/app/
+WORKDIR /usr/src/app/
+
+COPY . .
 
 EXPOSE 3000
 
