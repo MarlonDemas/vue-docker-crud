@@ -19,7 +19,7 @@
         "sweet-modal-vue": "^2.0.0",
         "v-click-outside": "^3.0.0",
         "vue-m-message": "^2.0.0",
-        "vue-resource": "^1.5.1"
+        "vue-resource": "^1.5.3"
     },
     "devDependencies": {
         "node-sass": "^4.13.0",
